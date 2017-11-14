@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная_Магазин</title>
+    <link rel="stylesheet" href="reset/reset.css">
+    <link rel="stylesheet" href="scss-style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<header>
+    <div class="main-bar">
+        <div class="logo">
+            <a href="index.html"><img src="img/Group_2.jpg" alt="brand-icon">
+                <p>bran<span class="logo-span">d</span></p>
+            </a>
+        </div>
+        <div class="search-adapt">
+            <a href="#"><img src="img/search-adapt.png" alt="loopa"></a>
+        </div>
+        <div class="dropdown-form">
+            <div class="dropdown">
+                <button><span>Browse</span><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                <div class="dropdown-menu-wraper">
+                    <ul class="dropdown-menu left-side">
+                        <li><a href="https://yandex.ru/">yandex</a></li>
+                        <li><a href="https://geekbrains.ru/">geekbrains</a></li>
+                        <li><a href="https://www.google.ru/">google</a></li>
+                    </ul>
+                </div>
+            </div>
+            <form method="post" class="icon">
+                <input type="search" placeholder="Search for item...">
+                <input type="submit" value="1">
+            </form>
+        </div>
+        <div class="account">
+            <button><span>My Account</span><i class="fa fa-caret-down" aria-hidden="true"></i></button>
+            <div class="dropdown-menu-wraper">
+                <ul class="dropdown-menu right-side">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="shop-cart.html">shop-cart</a></li>
+                    <li><a href="checkout.html">checkout</a></li>
+                </ul>
+            </div>
+        </div>
+        <a href="shop-cart.html" class="a-link"><img src="img/Forma_1.jpg"></a>
+        <div class="account-adapt">
+            <a href="#"><img src="img/chel.png" alt="chel"></a>
+        </div>
+        <div class="burger">
+            <a href="#"><img src="img/burger.png" alt="burger"></a>
+        </div>
+    </div>
+</header>
+<nav>
+    <ul class="nav">
+        <li><a href="index.html">home</a></li>
+        <li><a href="product.html">man</a></li>
+        <li><a href="single.html">woman</a></li>
+        <li><a href="single.html">kids</a></li>
+        <li><a href="product.html">accoseriese</a></li>
+        <li><a href="product.html">featured</a></li>
+        <li><a href="product.html">hot deals</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="product-slider">
+        <div class="top-bar">
+            <div class="top-bar__wraper">
+                <p>new arrivals</p>
+                <ul class="breadcrumb">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">men</a></li>
+                    <li><a href="#"><span>new arrivals</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="slide-bar">
+            <a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            <img src="img/slide-pic.png" alt="catal">
+        </div>
+    </section>
+    <section class="product-descript">
+        <div class="collection">
+            <div class="descrip-top">
+                <h3>women collection</h3>
+                <h2>moschino cheap and chic</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates deleniti obcaecati
+                    aspernatur
+                    numquam impedit non, nulla excepturi modi officia dolores, temporibus velit. Numquam, dolore,
+                    impedit fugiat natus accusamus quam recusandae!</p>
+                <div class="add-descript"><span>material: </span>cotton</div>
+                <div class="add-descript"><span>designer: </span>binburhan</div>
+                <p>&#36;561</p>
+            </div>
+            <div class="descrip-bottom">
+                <div class="chos-blk">
+                    <label for="color">choose color</label><br>
+                    <select id="color" name="color">
+                        <option value="red">&#9634; red</option>
+                        <option value="green">&#9634; green</option>
+                        <option value="blue">&#9634; blue</option>
+                    </select>
+                </div>
+                <div class="chos-blk">
+                    <label for="size">choose size</label><br>
+                    <select id="size" name="color">
+                        <option value="xl">xl</option>
+                        <option value="l">l</option>
+                        <option value="m">m</option>
+                        <option value="s">s</option>
+                    </select>
+                </div>
+                <div class="chos-blk">
+                    <label for="quant">choose quant</label><br>
+                    <select id="quant" name="color">
+                        <option value="num">1</option>
+                        <option value="num">2</option>
+                        <option value="num">3</option>
+                        <option value="num">4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="add-link">
+                <a href="#">
+                    <p class="col-link"><span>Add to Cart</span></p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="fetured-items">
+        <div class="shop-cart">
+            <div class="title">
+                <h2>you may like also</h2>
+            </div>
+            <div class="price-cell">
+                <img src="img/girl_1.jpg" alt="people">
+                <a href="#">
+                    <p class="cart-link"><span>Add to Cart</span></p>
+                </a>
+                <div class="bottom">
+                    <p>mango people t-shirt</p>
+                    <p>&#36;52.00</p>
+                </div>
+            </div>
+            <div class="price-cell">
+                <img src="img/girl_2.png" alt="people">
+                <a href="#">
+                    <p class="cart-link"><span>Add to Cart</span></p>
+                </a>
+                <div class="bottom">
+                    <p>mango people t-shirt</p>
+                    <p>&#36;52.00</p>
+                </div>
+            </div>
+            <div class="price-cell">
+                <img src="img/girl_3.jpg" alt="people">
+                <a href="#">
+                    <p class="cart-link"><span>Add to Cart</span></p>
+                </a>
+                <div class="bottom">
+                    <p>mango people t-shirt</p>
+                    <p>&#36;52.00</p>
+                </div>
+            </div>
+            <div class="price-cell">
+                <img src="img/girl_4.jpg" alt="people">
+                <a href="#">
+                    <p class="cart-link"><span>Add to Cart</span></p>
+                </a>
+                <div class="bottom">
+                    <p>mango people t-shirt</p>
+                    <p>&#36;52.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<article class="testimon">
+    <div class="test-wraper">
+        <div class="testimonials">
+            <img class="face" src="img/face.png" alt="face">
+            <div class="text-blk">
+                <blockquote>
+                    <p>
+                        <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur tempora nulla rem,
+                            praesentium non consequuntur nostrum earum minus cumque et deleniti nesciunt
+                            provident.</q>
+                    </p>
+                    <cite>Bin Burhan
+                        <br>
+                        <span>Dhaka,Bd</span>
+                    </cite>
+                </blockquote>
+                <div class="dash">
+                    <ul>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <p>subscribe
+                <br>
+                <span>for our newletter and promotion</span></p>
+            <form action="post">
+                <input type="email" name="text" placeholder="Enter Your Email"><input type="submit"
+                                                                                      value="Subscribe">
+            </form>
+        </div>
+    </div>
+</article>
+<section class="pre-footer">
+    <div class="pre-footer-wraper">
+        <div class="logo-blk">
+            <div class="logo-blk-1 logo">
+                <a href="index.html"><img src="img/Group_2.jpg" alt="brand-icon">
+                    <p>bran<span class="logo-span">d</span></p>
+                </a>
+            </div>
+            <div class="text">
+                <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally
+                    syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded
+                    array of processes and cross-unit partnerships.</p>
+                <br>
+                <p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior
+                    initiatives for wireless technologies.
+                    <br> Dynamically optimize.</p>
+            </div>
+        </div>
+        <div class="logo-blk-1 col-blk">
+            <h3>company</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">How It Works</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="logo-blk-1 col-blk">
+            <h3>information</h3>
+            <ul>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">How to Buy</a></li>
+                <li><a href="#">How to Sell</a></li>
+                <li><a href="#">Promotion</a></li>
+            </ul>
+        </div>
+        <div class="logo-blk-1 col-blk">
+            <h3>shop category</h3>
+            <ul>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Child</a></li>
+                <li><a href="#">Apparel</a></li>
+                <li><a href="#">Browse All</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer-wraper">
+        <p>&copy; 2017 Brand All Rights Reserved</p>
+        <p>Done by Pavlenko Maksim</p>
+        <div class="social-icons">
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>

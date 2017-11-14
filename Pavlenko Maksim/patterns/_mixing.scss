@@ -1,0 +1,88 @@
+@import "variables";
+@import "temp";
+
+@mixin position($primewidth,$primeMargin) {
+  max-width: $primewidth;
+  margin: $primeMargin;
+}
+
+@mixin upperText($fontWeight,$textTrans,$primeColor) {
+  font-weight: $fontWeight;
+  text-transform: $textTrans;
+  color: $primeColor;
+}
+
+@mixin border($bordColor) {
+  border: 1px solid $bordColor;
+}
+
+@mixin borderRadius($topLeft,$bottomLeft,$topRight,$bottomRight) {
+  border-top-left-radius: $topLeft;
+  border-bottom-left-radius: $bottomLeft;
+  border-top-right-radius: $topRight;
+  border-bottom-right-radius: $bottomRight;
+}
+
+@mixin button($bgColor,$btnColor) {
+  background: $bgColor;
+  color: $btnColor;
+  cursor: pointer;
+}
+
+@mixin buttonPosJustify($justify,$wrap) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: row;
+  flex-wrap: $wrap;
+}
+
+@mixin a-decor($lineheight, $textAlign,$primeColor) {
+  line-height:$lineheight;
+  text-align:$textAlign;
+  text-decoration: none;
+  color: $primeColor;
+}
+
+@mixin textGeneral($primeFontsize,$primeLineheight,$primeFontweight,$primeColor) {
+  font-size: $primeFontsize;
+  line-height: $primeLineheight;
+  font-weight: $primeFontweight;
+  color: $primeColor;
+}
+
+@mixin tableGeneral($primewidth,$borderCollapse,$textTrans) {
+  width: $primewidth;
+  border-collapse: $borderCollapse;
+  text-transform: $textTrans;
+}
+
+@mixin inputGeneral($width,$height,$primeColor,$textIndent) {
+  width: $width;
+  height: $height;
+  margin: 10px 0;
+  border: 1px solid $primeColor;
+  background-color: #fff;
+  text-indent: $textIndent;
+}
+
+@mixin inputForms($width,$height,$textIndent,$bgColor,$primeFontsize,$primeFontweight,$primeLineheight,$primeColor) {
+  width: $width;
+  height: $height;
+  text-indent: $textIndent;
+  background-color: $bgColor;
+  font-size: $primeFontsize;
+  font-weight: $primeFontweight;
+  line-height: $primeLineheight;
+  color: $primeColor;
+  border: none;
+}
+@mixin selectForm ($width,$height,$primeFontsize,$primeTextIndent,$bordColor){
+  width: $width;
+  height: $height;
+  font-size: $primeFontsize;
+  text-indent: $primeTextIndent;
+  color: $primeColor;
+  border-color:$bordColor;
+}
+
+

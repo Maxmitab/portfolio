@@ -1,0 +1,145 @@
+@import "variables";
+
+%spotForm {
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.17em;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: #c0c0c0;
+}
+
+%logo {
+  & p {
+    text-transform: uppercase;
+    font: {
+      size: $primeFontsize+13px;
+      weight: 400;
+    }
+    color: #3d3d40;
+    float: left;
+    line-height: 32px;
+    margin-right: 37px;
+  }
+  & img {
+    float: left;
+    margin-top: -10px;
+    margin-right: 13px
+  }
+  & .logo-span {
+    text-transform: uppercase;
+    font: {
+      size: $primeFontsize+13px;
+      weight: 700;
+    }
+    color: #f16d7f;
+  }
+}
+
+%icons {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  margin: 0.3em;
+  background-color: #fff;
+  text-align: center;
+}
+
+%radio-btn {
+  input[type=checkbox],
+  input[type=radio] {
+    display: none;
+  }
+
+  input[type=checkbox]:checked + label:before {
+    color: #f6a2ad;
+  }
+
+  input[type=radio]:checked + label:before, input[type=checkbox]:checked + label {
+    font-size: 1em;
+    color: #f6a2ad;
+  }
+
+  input[type=radio] + label:before {
+    content: "\26AB";
+    display: inline-block;
+    border: 1px solid #f6a2ad;
+    border-radius: 50%;
+    font-size: 1em;
+    color: #f6a2ad;
+    line-height: 1.1em;
+    margin: 0px 6px 0px 0px;
+    height: 13px;
+    width: 13px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0;
+    transition: font-size ease .3s;
+  }
+}
+
+%product-link {
+  opacity: 0;
+  text-align: center;
+  position: absolute;
+  line-height: 268px;
+  width: 261px;
+  top: 0;
+  color: #fff;
+  transition: background 0.5s linear;
+  & span {
+    color: #fff;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 10em;
+    height: 2.5em;
+    border: 1px solid #fff;
+    left: 22%;
+    top: 44%;
+  }
+  &:before {
+    content: url("img/Forma_1sm.png");
+    position: absolute;
+    left: 65px;
+    top: 13px;
+  }
+}
+
+%checkbox {
+  input#check1,
+  input#check2,
+  input#check3,
+  input#check4,
+  input#check5,
+  input#check6{
+    display: none;
+  }
+
+  input#check1 ~ .group-blks-list_1,
+  input#check2 ~ .group-blks-list_2,
+  input#check3 ~ .group-blks-list_3,
+  input#check4 ~ .group-blks-list_4,
+  input#check5 ~ .group-blks-list_5,
+  input#check6 ~ .group-blks-list_6{
+    display: block;
+  }
+
+  input#check1:checked ~ .group-blks-list_1,
+  input#check2:checked ~ .group-blks-list_2,
+  input#check3:checked ~ .group-blks-list_3,
+  input#check4:checked ~ .group-blks-list_4,
+  input#check5:checked ~ .group-blks-list_5,
+  input#check6:checked ~ .group-blks-list_6{
+    display: none;
+  }
+}
+
+%icons2 {
+    position: absolute;
+    top: -0.3em;
+    left: -3.5em;
+  }

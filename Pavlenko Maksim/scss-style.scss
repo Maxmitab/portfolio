@@ -1,0 +1,1016 @@
+@import "patterns/links";
+@import "patterns/variables";
+@import "patterns/mixing";
+@import "patterns/general";
+@import "patterns/hidden";
+@import "patterns/temp";
+
+body {
+  font-family: $primeFontfamily;
+  font-size: $primeFontsize;
+  color: $primeColor;
+  box-sizing: $primeBox;
+  line-height: $primeLineheight;
+}
+
+header {
+  @include border(#e6e6e6);
+  .logo, form, .dropdown {
+    float: left;
+  }
+  .a-link, .account {
+    float: right;
+  }
+  .main-bar {
+    padding: 34px 0 66px;
+  }
+  .icon {
+    width: 30%;
+    & input[type="search"] {
+      @include inputForms(85%, auto, 8px, #fff, auto, 400, 2.5em, $primeColor);
+      border-bottom: 1px solid #e6e6e6;
+      border-top: 1px solid #e6e6e6;
+      border-left: none;
+      border-right: none;
+      float: left;
+    }
+    & input[type="submit"] {
+      min-width: 12%;
+      line-height: 2.6em;
+      background: url(img/find.png) center no-repeat;
+      background-size: 18px;
+      background-color: #fff;
+      text-indent: -9999px;
+      border: 1px solid #e6e6e6;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      float: left;
+    }
+    & input[type="submit"]:hover {
+      background-size: 20px;
+      cursor: pointer;
+    }
+  }
+  .dropdown, .account {
+    position: relative;
+    & button {
+      @include button($primeBgcLinear, #838383);
+      @include border(#e6e6e6);
+      padding: 0.67em 1em;
+    }
+    & .fa {
+      padding-left: 10px;
+    }
+    & a {
+      display: block;
+      padding: 0.2em 0.8em;
+      text-decoration: none;
+      background: whitesmoke;
+      color: #333;
+      text-transform: capitalize;
+    }
+    & .dropdown-menu-wraper .left-side {
+      width: 6.2em;
+    }
+    & .dropdown-menu-wraper .right-side {
+      width: 7.8em;
+    }
+    & a:hover {
+      background: #bbb;
+    }
+    &:hover .dropdown-menu {
+      display: block;
+      animation: myMove 0.5s ease-in-out 0s 1 normal;
+    }
+    &:hover .dropdown-menu-wraper {
+      display: block;
+    }
+    & button:hover {
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+    }
+  }
+  .dropdown button {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  .account button {
+    background: #f16d7f;
+    color: #ffffff;
+    border-radius: 3px;
+    border: none;
+  }
+  .a-link {
+    margin: 5px 1.5% 0 0;
+  }
+}
+
+nav {
+  .nav {
+    @include upperText(700, uppercase, $primeColor);
+    @include position(700px, $primeMargin);
+    display: block;
+    padding: 0.8em 0;
+    text-align: center;
+    & a {
+      @include a-decor(26px, left, $primeColor);
+      padding: 12px 17px;
+    }
+    & li {
+      display: inline-block;
+    }
+    & li:hover a {
+      border-bottom: 3px solid #ef5b70;
+      transition: border-bottom 0.5s ease;
+    }
+    & li:active a {
+      padding: 8px 17px;
+    }
+  }
+}
+
+/* index */
+main {
+  .slider {
+    @include upperText(700, uppercase, $primeColor);
+    background: url("img/slider-bg.png") no-repeat;
+    background-size: cover;
+    font-size: 36px;
+    text-align: center;
+    padding: 7em 0;
+    & .slogan {
+      text-align: left;
+      padding-left: 7px;
+      border-left: 10px solid #f16d7f;
+      & p:first-child {
+        margin-bottom: 0.2em;
+        font-size: 60px;
+        line-height: 0.7em;
+      }
+      & p:last-child {
+        line-height: 1em;
+        font-size: 40px;
+        & span {
+          color: #f16d7f;
+        }
+      }
+    }
+  }
+  .sales-box {
+    text-align: center;
+    padding: 6em 0;
+    & .left-box {
+      margin-right: 16px;
+    }
+    & .left-box, .right-box {
+      display: inline-block;
+      & .photo1, .photo2 {
+        position: relative;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        & p {
+          @include textGeneral(18px, 1em, 900, #222);
+          position: absolute;
+          top: 8%;
+          left: 0;
+          z-index: 200;
+          background-color: #fff;
+          padding: 0.5em 1em;
+        }
+        & span {
+          @include textGeneral(30px, 1em, 900, #f16d7f);
+          text-align: left;
+        }
+      }
+    }
+  }
+  .fetured-items {
+    & .shop-cart {
+      & .title {
+        & h2 {
+          @include upperText(700, capitalize, #222);
+        }
+        & p {
+          color: #9f9f9f;
+          line-height: 45px;
+        }
+      }
+    }
+    & .browse-button {
+      text-align: center;
+      & .brow-btn {
+        min-width: 212px;
+        & a {
+          @include textGeneral(16px, 54px, 700, #fff);
+          background-color: #f16d7f;
+          text-decoration: none;
+          padding: 0.8em;
+          &:hover {
+            box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
+            margin-left: 1px;
+          }
+          &:active {
+            box-shadow: none;
+            margin-right: 2px;
+          }
+        }
+      }
+    }
+  }
+  .sales-offer-wrapper {
+    background-color: #222224;
+    color: #fff;
+    overflow: hidden;
+    margin: 7em auto;
+    -moz-box-shadow: inset 0 0 10em #000;
+    -webkit-box-shadow: inset 0 0 10em #000;
+    box-shadow: inset 0 0 10em #000;
+    & .add-text {
+      @include upperText(700, uppercase, #fff);
+      background: url("img/30_offer.jpg") no-repeat;
+      background-size: cover;
+      float: left;
+      text-indent: 3em;
+      text-align: left;
+      width: 60%;
+      padding: 9em 0 19em;
+      & p:first-child {
+        font-size: 50px;
+        line-height: 1em;
+        & span {
+          color: #f16d7f;
+        }
+      }
+      & p:last-child {
+        font-size: 30px;
+        line-height: 1em;
+      }
+    }
+    & .add-blks {
+      @include textGeneral(1em, 24px, 300, #fbfbfb);
+      float: right;
+      max-width: 230px;
+      text-align: left;
+      margin: 5% 3% 0 8%;
+      & dl {
+        margin-bottom: 2em;
+        & dt {
+          position: relative;
+          @include textGeneral(20px, 1em, 700, #fff);
+          margin-bottom: 0.4em;
+        }
+        & .delivery:before {
+          @extend %icons2;
+          content: url("img/truck.png");
+        }
+        & .sales:before {
+          @extend %icons2;
+          content: url("img/procent.png");
+        }
+        & .quality:before {
+          @extend %icons2;
+          content: url("img/crown.png");
+        }
+      }
+    }
+  }
+}
+
+/* shop-cart */
+main {
+  .product-slider {
+    background-color: #f8f3f4;
+    & .top-bar__wraper {
+      text-align: center;
+      padding: 65px 0 85px 0;
+      text-transform: uppercase;
+    }
+    & p {
+      @include textGeneral(24px, $primeLineheight, 900, #f16d7f);
+      float: left;
+    }
+    & .breadcrumb {
+      float: right;
+    }
+    & .breadcrumb li {
+      display: inline;
+    }
+    & .breadcrumb li a {
+      @include upperText(300, uppercase, #636363);
+      line-height: 20px;
+    }
+    & .breadcrumb li a > span {
+      color: #f16d7f;
+      font-weight: 700;
+    }
+    & .breadcrumb li + li:before {
+      padding: 8px;
+      color: black;
+      content: "/\00a0";
+    }
+  }
+  .trade-cart {
+    & .table-wrapper {
+      @include position($primewidth, 3em auto);
+      & table {
+        @include tableGeneral(100%, collapse, uppercase);
+        @include textGeneral(13px, $primeLineheight, 400, #656565);
+        & th, td {
+          border-bottom: 1px solid #eaeaea;
+          padding: 2em 0;
+          text-align: center;
+          vertical-align: middle;
+          & a {
+            @include a-decor(none, none, $primeColor);
+          }
+        }
+        & th {
+          @include textGeneral(1em, $primeLineheight, 900, $primeColor);
+          padding: 2em 0 1em;
+        }
+        & tr td:first-child, tr th:first-child {
+          text-align: left;
+        }
+        & tr td:last-child p {
+          @extend %spotForm;
+        }
+        & td img, .text-blk2 {
+          display: inline-block;
+          vertical-align: top;
+          margin: 1em;
+        }
+        & .text-blk2 strong {
+          line-height: 50px;
+          color: $primeColor;
+        }
+        & .text-blk2 p {
+          text-transform: none;
+        }
+        & .text-blk2 p span {
+          @include textGeneral(13px, $primeLineheight, 300, #6f6e6e);
+        }
+        & .counter {
+          @include border(#eaeaea);
+          width: 54px;
+          line-height: 30px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .filling-form-wrapper {
+    @include upperText(700, uppercase, $primeColor);
+    padding: 5em 0;
+    & .button-wrapper {
+      @include buttonPosJustify(space-between, wrap);
+      margin-bottom: 4em;
+      & button {
+        @include button(#fff, #4a4a4a);
+        @include border(#eaeaea);
+        font-family: $primeFontfamily;
+        width: 17.5em;
+        height: 4em;
+        transition: background-color 0.5s ease;
+        &:hover {
+          background: #f6a2ad;
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+    }
+    & .form-wrapper {
+      @include buttonPosJustify(space-between, wrap);
+      & .coupon {
+        & p:nth-of-type(2) {
+          @include upperText(300, none, #222);
+          font-size: 14px;
+          margin: 10px 0;
+        }
+      }
+      & .sum-block {
+        @include upperText(700, uppercase, #222);
+        height: 20em;
+        font-size: 11px;
+        background-color: #f5f3f3;
+        padding: 35px;
+        box-sizing: border-box;
+        & span {
+          margin-left: 15px;
+        }
+        & p:nth-of-type(2) span {
+          color: #f16d7f;
+        }
+        & .head-lines {
+          @include textGeneral(16px, 1em, 700, #222);
+          margin: 11px 0;
+        }
+        & .sum-block-text {
+          text-align: right;
+          border-bottom: $primeBorder;
+        }
+        & button {
+          @include upperText(700, uppercase, #fff);
+          @include button(#f16d7f, #fff);
+          width: 100%;
+          height: 50px;
+          border: $primeBorder;
+          font-size: 14px;
+          margin: 23px 0;
+          &:hover {
+            background-color: #f6a2ad;
+          }
+        }
+      }
+      & .ship-add, .coupon, .sum-block {
+        width: 30%;
+        display: inline-block;
+        vertical-align: top;
+      }
+      & .ship-add button:hover, .coupon button:hover {
+        background: #f6a2ad;
+        cursor: pointer;
+        color: #fff;
+      }
+      & .ship-add select, .ship-add input, .coupon input {
+        @include inputGeneral(100%, 45px, #eaeaea, 18px);
+        @include textGeneral(13px, 1em, 300, #b1b1b1);
+      }
+      & .ship-add button, .coupon button {
+        @include button(#fff, #4a4a4a);
+        width: 118px;
+        height: 35px;
+        border: $primeBorder;
+        margin: 10px 0;
+        font-weight: 700;
+        font-size: 11px;
+        transition: background-color 0.5s ease;
+      }
+    }
+  }
+}
+
+/* checkout */
+main {
+  .register-form {
+    & .register-form-wrapper {
+      padding: 5em 0;
+      & .info-blks {
+        @include textGeneral(13px, 20px, 400, #222);
+        @extend %checkbox;
+        border-bottom: 1px solid #e8e8e8;
+        & h2 {
+          @include upperText(700, uppercase, $primeColor);
+          font-size: 16px;
+          margin: 1em 0;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        & .group-blks {
+          @include buttonPosJustify (space-between, wrap);
+          display: inline-block;
+          width: 40%;
+          vertical-align: top;
+          form {
+            margin-bottom: 4em;
+            & .radio-btn {
+              @extend %radio-btn;
+            }
+          }
+          & input[type="submit"] {
+            @include inputForms(14em, 4em, none, #fff, $primeFontsize, 700, 1em, #4a4a4a);
+            position: relative;
+            border: $primeBorder;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding-right: 1.5em;
+            transition: background 0.5s linear;
+            &:hover {
+              background: #f6a2ad;
+              cursor: pointer;
+              color: #fff;
+            }
+          }
+        }
+        & .info-blks__verification p:nth-of-type(2n+1), .info-blks__login p:nth-of-type(1) {
+          @include upperText(700, uppercase, $primeColor);
+          margin-top: 1em;
+        }
+        & .info-blks__verification p:nth-of-type(2n), .info-blks__login p:nth-of-type(2) {
+          color: #b3b2b2;
+          margin-bottom: 1em;
+        }
+        & .info-blks__verification label, .info-blks__login label {
+          @include textGeneral(12px, 2.5em, 700, $primeColor);
+          text-transform: uppercase;
+          display: block;
+        }
+        & .info-blks__verification {
+          padding-left: 2em;
+          & ul {
+            @include textGeneral(1em, 28px, 400, #b3b2b2);
+            @extend %radio-btn;
+            position: relative;
+            text-indent: 1em;
+            margin-bottom: 4em;
+            & a {
+              color: #b3b2b2;
+            }
+            & li:before {
+              content: url('img/chev-right.jpg');
+              position: absolute;
+              left: -1em;
+            }
+          }
+        }
+        & .info-blks__login p:nth-of-type(3) {
+          color: #ff0d0d;
+          font-weight: 700;
+          margin: 1em 0 2.7em;
+        }
+        & .info-blks__login input {
+          @include inputForms(100%, 45px, 18px, #fff, 13px, 300, 1em, #b1b1b1);
+          border: $primeBorder;
+        }
+        & .info-blks__login span {
+          color: #ff0d0d;
+          font-size: 1.5em;
+        }
+        & .info-blks__login a {
+          margin-left: 3em;
+          color: currentColor;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+/* single */
+main {
+  .product-slider {
+    & .slide-bar {
+      position: relative;
+      border-color: #eaeaea;
+      /*height: 777px;*/
+      text-align: center;
+      background-color: #f7f7f7;
+      & img {
+        max-width: 47%
+      }
+      & .fa {
+        width: 3.2em;
+        height: 3.2em;
+        color: #fff;
+        background-color: rgba(42, 42, 42, 0.15);
+        line-height: 47px;
+        margin: 18% 0;
+        &:hover {
+          background-color: rgba(42, 42, 42, 0.5);
+        }
+      }
+      & .fa-chevron-right {
+        float: right;
+      }
+      & .fa-chevron-left {
+        float: left;
+      }
+    }
+  }
+  .product-descript {
+    & .collection {
+      @include textGeneral(14px, 24px, $primeFontweight, #2f2f2f);
+      position: relative;
+      z-index: 2;
+      margin: -7em auto 8em;
+      padding: 73px 0;
+      border: $primeBorder;
+      text-align: center;
+      background-color: #fff;
+      text-transform: uppercase;
+      & .descrip-top {
+        max-width: 618px;
+        margin: 0 auto;
+        border-bottom: $primeBorder;
+        & h3 {
+          position: relative;
+          display: inline-block;
+          padding: 0.4em 0;
+          color: #f16d7f;
+          font-weight: 700;
+          border-bottom: 1px solid #eaeaea;
+          &:after {
+            content: "";
+            position: absolute;
+            width: 63px;
+            height: 3px;
+            background-color: #ef5b70;
+            top: 36px;
+            left: 31%;
+          }
+        }
+        & h2 {
+          color: #4d4d4d;
+          font-size: 18px;
+          font-weight: 900;
+          margin: 0.8em 0;
+        }
+        & h2 + p {
+          max-width: 618px;
+          margin: 0 auto;
+          margin-top: 2.5em;
+          margin-bottom: 1em;
+          color: #5e5e5e;
+          font-weight: 300;
+          text-transform: lowercase;
+          padding: 0 1em;
+        }
+        & .add-descript {
+          display: inline-block;
+          @include textGeneral(1em, 1em, 700, #2f2f2f);
+          margin-left: 44px;
+          & span {
+            color: #b9b9b9;
+          }
+        }
+        & .add-descript + p {
+          @include textGeneral(24px, 1em, 700, #ef5b70);
+          margin: 1.5em 0;
+        }
+      }
+      & .descrip-bottom {
+        & .chos-blk {
+          display: inline-block;
+          margin: 4em 2em 2em;
+          text-align: left;
+          & label {
+            @include textGeneral(1em, 3em, 700, #2f2f2f);
+          }
+          & select {
+            @include selectForm(144px, 35px, 13px, 5px, #eaeaea);
+            @include upperText(400, uppercase, #bcbcbc);
+          }
+        }
+      }
+      & .add-link {
+        @include border(#ef5b70);
+        width: 48%;
+        margin: 0 auto;
+        background-color: #fff;
+        transition: background 0.5s ease;
+        & a {
+          @include a-decor(3em, center, #ef5b70);
+          @include upperText(700, none, #ef5b70);
+          font-size: 16px;
+        }
+        & span {
+          position: relative;
+          &:after {
+            content: url("img/shop-cart.png");
+            position: absolute;
+            top: -40%;
+            left: -40%;
+          }
+        }
+        &:hover {
+          background-color: #f6a2ad;
+          @include border(#f6a2ad);
+          & a {
+            color: #fff;
+          }
+          & span:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* product */
+main {
+  .product-line {
+    & .product-line-wrapper {
+      margin: 4em auto;
+      & .side-bar {
+        width: 20%;
+        display: inline-block;
+        text-align: left;
+        & .side-bar-menu {
+          & > li {
+            margin: 15px 0;
+          }
+          & .active {
+            color: #ef5b70;
+          }
+          & a {
+            @include upperText(700, uppercase, #6f6e6e);
+            display: block;
+            line-height: 40px;
+            text-decoration: none;
+            width: 100%;
+            border-left: 5px solid #ef5b70;
+            text-indent: 11px;
+            & .fa {
+              float: right;
+              margin-right: 10px;
+              line-height: 40px;
+            }
+          }
+          & .submenu {
+            display: none;
+            & a {
+              @include upperText(400, none, current);
+              line-height: 33px;
+              text-indent: 25px;
+              border-left: none;
+            }
+          }
+          & .a-bot, .a-bot2, .a-bot3 {
+            border-bottom: 1px solid #ebebeb;
+          }
+        }
+      }
+      & .main-bar {
+        width: 75%;
+        display: inline-block;
+        vertical-align: top;
+        color: #6f6e6e;
+        margin-left: 4%;
+        & .main-top-bar {
+          text-align: center;
+          & h3 {
+            @include upperText(700, uppercase, #6f6e6e);
+            margin: 0 0 20px;
+          }
+          & .trend {
+            & p {
+              @include textGeneral($primeFontsize, 1em, 400, #6f6e6e);
+              display: inline-block;
+              border-right: 1px solid #dfdfdf;
+              padding: 0 1em;
+              margin: 0.3em 0;
+              &:last-child {
+                border-right: none;
+              }
+            }
+          }
+          & .size {
+            & input {
+              margin: 0.5em 0.8em;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+            & label {
+              text-align: left;
+              text-transform: uppercase;
+              margin-right: 0.5em;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+          & .price {
+            & p {
+              float: left;
+              line-height: 26px;
+              margin: 1em 0 0;
+              &:last-child {
+                float: right;
+              }
+            }
+          }
+          & .sort {
+            background-color:  #f3f3f3;
+            width:  100%;
+            margin: 35px 0;
+            text-align: left;
+            & .sort-name, .sort-show {
+              @include textGeneral(14px,30px,400,#6f6e6e);
+              background-color:  #fff;;
+              display:inline-block;
+              margin:9px 0 9px 10px;
+              & label {
+                text-transform: none;
+                padding: 0 10px;
+              }
+              & select {
+                border:none;
+                color:  #6f6e6e;
+                height:  30px;
+                width: 100px;
+                border-left: 1px solid #ebebeb;
+                text-indent: 10px;
+              }
+            }
+            .sort-show select {
+              width: 60px;
+            }
+          }
+        }
+        & .trend, .size, .price {
+          width: 30%;
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 1%;
+        }
+        & .pagin-bar {
+          & .pagination {
+            float: left;
+            border: 1px solid #ebebeb;
+            padding: 4px 0;
+            & a {
+              color:  #c4c4c4;
+              padding: 0 8px;
+              text-decoration: none;
+              line-height: 2em;
+              & .active {
+                border-radius: 5px;
+                color:  #ef5b70;
+              }
+              &:hover:not(.active) {
+                background-color: #ddd;
+                border-radius: 5px;
+              }
+            }
+          }
+          & .button {
+            @include button(#fff,#ef5b70);
+            @include textGeneral(16px,26px,600,#ef5b70);
+            @include a-decor(26px,center,#ef5b70);
+            float: right;
+            border: 1px solid #ef5b70;
+            border-radius:  3px;
+            width:  150px;
+            padding: 10px 0;
+            transition: background 0.5s ease;
+            &:hover {
+              background: #f6a2ad;
+              cursor: pointer;
+              color: #fff;
+              border-color: #f6a2ad;
+            }
+          }
+        }
+      }
+    }
+  }
+  .product-sales-offer {
+    & .product-sales-offer-wrapper {
+      max-width: 100%;
+      background-color: #222224;
+      & .sales-offer-wrapper {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        box-shadow:none;
+        padding: 6em 0;
+        margin:0 auto;
+        & dl {
+          width: 28%;
+          margin: 2em;
+          & dt {
+            position: relative;
+            @include textGeneral(20px, 1em, 700, #fff);
+            margin: 1em 0 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+article {
+  height: 438px;
+  background: url("img/bg.jpg") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  & .test-wraper {
+    @include buttonPosJustify(space-between, wrap);
+    & .testimonials {
+      @include buttonPosJustify(space-around, nowrap);
+      width: 50%;
+      padding: 111px 0 117px 0;
+      border-right: $primeBorder;
+      & .face {
+        width: 83px;
+        height: 83px;
+      }
+      & .text-blk {
+        vertical-align: top;
+        margin-right: 28px;
+        position: relative;
+        max-width: 341px;
+        font-size: 16px;
+        text-align: left;
+        & p {
+          margin-bottom: 19px;
+          font-style: italic;
+          line-height: 26px;
+        }
+        & cite {
+          @include textGeneral(1em, 14px, 700, #f16d7f);
+        }
+        & span {
+          @include textGeneral(1em, 12px, 300, #222224);
+        }
+        & .dash li {
+          position: relative;
+          display: inline-block;
+          margin-top: 41px;
+          width: 38px;
+          height: 4px;
+          background-color: #fff;
+          &:hover {
+            @include button(#f6a2ad, $primeColor);
+            transition: background-color 0.5s ease;
+          }
+        }
+      }
+    }
+    & .form {
+      width: 45%;
+      text-align: center;
+      & p {
+        @include upperText(400, uppercase, $primeColor);
+        padding: 131px 0 35px 0;
+        font-size: 24px;
+        & span {
+          font-size: 14px;
+        }
+      }
+      & input[type=email] {
+        @include inputForms(45%, auto, 2em, #e1e1e1, 14px, 400, 45px, rgba(34, 34, 36, 0.67));
+        @include borderRadius(10em, 10em, none, none);
+      }
+      & input[type=submit] {
+        @include inputForms(104px, 46px, none, #f16d7f, 14px, 400, 1em, #fff);
+        @include borderRadius(none, none, 10em, 10em);
+        cursor: pointer;
+        &:hover {
+          background: #f6a2ad;
+        }
+      }
+    }
+  }
+}
+
+section {
+  .pre-footer-wraper {
+    @include buttonPosJustify(space-around, nowrap);
+    padding: 7em 0;
+    & .logo-blk {
+      @include textGeneral(14px, 24px, 300, #898989);
+      width: 40%;
+      & .logo-blk-1 {
+        display: inline-block;
+        margin-bottom: 1em;
+      }
+    }
+    & .col-blk {
+      @include textGeneral(16px, 42px, 400, #898989);
+      min-width: 140px;
+      & h3 {
+        @include textGeneral(18px, 26px, 700, #f16d7f);
+        text-transform: uppercase;
+        margin-bottom: 1.5em;
+      }
+      & a {
+        color: #898989;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #e6e6e6;
+  .footer-wraper {
+    @include buttonPosJustify(space-between, wrap);
+    @include textGeneral(16px, 42px, 400, #7a7a7a);
+    padding: 33px 0;
+    & .social-icons {
+      width: 50%;
+      text-align: right;
+      & li {
+        @extend %icons;
+        &:hover {
+          background-color: #f16d7f;
+          cursor: pointer;
+        }
+        & i {
+          color: #b2b2b2;
+          line-height: 2em;
+          width: 2em;
+          vertical-align: super;
+          &:hover {
+            color: #f7f7f8;
+          }
+        }
+      }
+    }
+  }
+}
+
+
